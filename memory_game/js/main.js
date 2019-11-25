@@ -1,15 +1,9 @@
 console.log("Up and running!");
+console.log("User flipped" + cardOne);
+console.log("User flipped" + cardTwo);
 
-const cards = ["queen", "queen", "king", "king"]
-const cardsInPlay = []
-var cardOne = cards[0]
-var cardTwo = cards[3]
-cardsInPlay.push('cardOne')
-cardsInPlay.push('cardTwo')
-console.log("User flipped queen")
-console.log("User flipped king")
-
-if (cardsInPlay === 2)
+var cards = ["queen","queen","king","king"];
+var cardsInPlay = [];
 
 function checkForMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -19,8 +13,13 @@ function checkForMatch() {
 	}
 }
 
+function flipCard(cardID) {
+	cardsInPlay.push(cards[cardId]);
+	checkForMatch();
+	console.log("User flipped" + cards[cardId]);
+}
 
-
-
+flipCard(0);
+flipCard(2);
 
 
